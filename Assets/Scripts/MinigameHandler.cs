@@ -32,6 +32,7 @@ public class MinigameHandler : MonoBehaviour
             StartMinigamesQueue();
             runningQueue = true;
         }
+        minigamesList.Clear();
         //showMinigamesQueue();
     }
 
