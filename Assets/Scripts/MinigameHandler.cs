@@ -11,6 +11,8 @@ public class MinigameHandler : MonoBehaviour
     private Queue<Minigame> minigames; //Queue of minigames
     private List<Minigame> minigamesToPick; //List of minigames that have already been played and can be picked again to enqueue (ScoreMinigames should not be here)
 
+    private bool runningQueue; //Bool for starting the minigames queue the first time
+
     private void Awake()
     {
         minigames = new Queue<Minigame>();
@@ -25,7 +27,12 @@ public class MinigameHandler : MonoBehaviour
             minigames.Enqueue(minigamesList[i]); //Enqueue minigame
             minigames.Enqueue(scoreMinigame); //Enqueue score minigame
         }
-        showMinigamesQueue();
+        if (!runningQueue)
+        {
+            StartMinigamesQueue();
+            runningQueue = true;
+        }
+        //showMinigamesQueue();
     }
 
     private void randomizeMinigamesList(List<Minigame> minigamesList) //Shuffle a list of minigames
@@ -44,10 +51,41 @@ public class MinigameHandler : MonoBehaviour
         minigamesList[j] = temp;
     }
 
-    private void reAddToQueue() //Call this when you think enough minigames have passed to randomly insert them again
+    private void reAddToQueue(List<Minigame> minigamesList) //Call this when you think enough minigames have passed to randomly insert them again
     {
-        randomizeMinigamesList(minigamesToPick);
+        randomizeMinigamesList(minigamesList);
     }
+
+    private void StartMinigamesQueue() //Call this to start the minigame queue for the first time
+    {
+        Minigame firstGame = minigames.Dequeue();
+        StartGame(firstGame);
+    }
+
+    public void NextMinigame() //Call this when a minigame has been finished
+    {
+        Minigame nextMinigame = minigames.Dequeue();
+
+        //This way, the last minigame won't be on minigamesToPick but it will on next queue iteration, so we make sure that there won't be two same minigames in a row
+        //So we will insert in queue n-1 minigames (being n the size of minigamesPrefabs)
+        if (minigames.Count <= 1) // <= 1 because there will just be a score minigame left inside the queue
+        {
+            reAddToQueue(minigamesToPick);
+        }
+
+        if (!nextMinigame == scoreMinigame) //Just add minigames to minigamesToPick, not scoreminigames
+        {
+            minigamesToPick.Add(nextMinigame);
+        }
+
+        StartGame(nextMinigame);
+    }
+    public void StartGame(Minigame game)
+    {
+        game.StartMinigame();
+    }
+
+    #region DEBUG
 
     private void showMinigamesQueue() //Show the minigames enqueued in console
     {
@@ -66,8 +104,5 @@ public class MinigameHandler : MonoBehaviour
         }
     }
 
-    public void StartGame()
-    {
-        TestMinigame.StartMinigame();
-    }
+    #endregion
 }
