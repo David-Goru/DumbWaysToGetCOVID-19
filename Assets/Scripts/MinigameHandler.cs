@@ -9,7 +9,6 @@ public class MinigameHandler : MonoBehaviour
     [SerializeField] private Minigame scoreMinigame; //This will be the score minigame (minigame to show the score of the game)
     [SerializeField] private List<Minigame> minigamesPrefabs; //List of all the minigames prefabs available
     private Queue<Minigame> minigames; //Queue of minigames
-    private List<Minigame> minigamesToPick; //List of minigames that have already been played and can be picked again to enqueue (ScoreMinigames should not be here)
 
     private bool runningQueue; //Bool for starting the minigames queue the first time
 
@@ -71,12 +70,12 @@ public class MinigameHandler : MonoBehaviour
         //So we will insert in queue n-1 minigames (being n the size of minigamesPrefabs)
         if (minigames.Count <= 1) // <= 1 because there will just be a score minigame left inside the queue
         {
-            reAddToQueue(minigamesToPick);
+            reAddToQueue(minigamesPrefabs);
         }
 
         if (!nextMinigame == scoreMinigame) //Just add minigames to minigamesToPick, not scoreminigames
         {
-            minigamesToPick.Add(nextMinigame);
+            minigamesPrefabs.Add(nextMinigame);
         }
 
         StartGame(nextMinigame);
