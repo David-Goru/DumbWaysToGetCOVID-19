@@ -71,7 +71,7 @@ public class MinigameHandler : MonoBehaviour
 
         //This way, the last minigame won't be on minigamesToPick but it will on next queue iteration, so we make sure that there won't be two same minigames in a row
         //So we will insert in queue n-1 minigames (being n the size of minigamesPrefabs)
-        if (minigames.Count == 0) // Last minigame was score, reinsert minigames of minigamesPrefabs
+        if (minigames.Count <= 1) // <= 1 because there will just be a score minigame left inside the queue
         {
             Debug.Log("REINSERTANDO MINIJUEGOS");
             reAddToQueue(minigamesPrefabs);
