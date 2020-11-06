@@ -50,14 +50,14 @@ public class Minigame : MonoBehaviour
 
     public void EndMinigame(bool win)
     {
+        MinigameHandler.instance.NextMinigame();
+
         if (win)
         {
-            MinigameHandler.instance.NextMinigame();
             Debug.Log("VICTORIA");
         }
         else
         {
-            MinigameHandler.instance.NextMinigame();
             Debug.Log("DERROTA");
         }
 

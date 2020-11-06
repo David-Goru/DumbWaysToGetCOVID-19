@@ -7,6 +7,7 @@ public class MinigameHandler : MonoBehaviour
     [SerializeField] private Minigame scoreMinigame; //This will be the score minigame (minigame to show the score of the game)
     [SerializeField] private List<Minigame> minigamesPrefabs; //List of all the minigames prefabs available
     private Queue<Minigame> minigames; //Queue of minigames
+    private Minigame nextMinigame; //Store the next minigame to play
 
     private bool runningQueue; //Bool for starting the minigames queue the first time
 
@@ -29,7 +30,8 @@ public class MinigameHandler : MonoBehaviour
         }
         if (!runningQueue)
         {
-            StartMinigamesQueue();
+            Debug.Log("FIRST MINIGAME");
+            startMinigamesQueue();
             runningQueue = true;
         }
         minigamesList.Clear();
@@ -57,19 +59,19 @@ public class MinigameHandler : MonoBehaviour
         randomizeMinigamesList(minigamesList);
     }
 
-    private void StartMinigamesQueue() //Call this to start the minigame queue for the first time
+    private void startMinigamesQueue() //Call this to start the minigame queue for the first time
     {
-        Minigame firstGame = minigames.Dequeue();
-        StartGame(firstGame);
+        nextMinigame = minigames.Dequeue();
+        StartGame(nextMinigame);
     }
 
     public void NextMinigame() //Call this when a minigame has been finished
     {
-        Minigame nextMinigame = minigames.Dequeue();
+        nextMinigame = minigames.Dequeue();
 
         //This way, the last minigame won't be on minigamesToPick but it will on next queue iteration, so we make sure that there won't be two same minigames in a row
         //So we will insert in queue n-1 minigames (being n the size of minigamesPrefabs)
-        if (minigames.Count <= 1) // <= 1 because there will just be a score minigame left inside the queue
+        if (minigames.Count == 0) // Last minigame was score, reinsert minigames of minigamesPrefabs
         {
             Debug.Log("REINSERTANDO MINIJUEGOS");
             reAddToQueue(minigamesPrefabs);
