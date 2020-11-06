@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class MinigameHandler : MonoBehaviour
 {
-    public Minigame TestMinigame; //Test a specific minigame
-
     [SerializeField] private Minigame scoreMinigame; //This will be the score minigame (minigame to show the score of the game)
     [SerializeField] private List<Minigame> minigamesPrefabs; //List of all the minigames prefabs available
     private Queue<Minigame> minigames; //Queue of minigames
 
     private bool runningQueue; //Bool for starting the minigames queue the first time
 
+    public static MinigameHandler instance; //Singleton
+
     private void Awake()
     {
+        instance = this;
         minigames = new Queue<Minigame>();
         randomizeMinigamesList(minigamesPrefabs);
     }
@@ -70,11 +71,13 @@ public class MinigameHandler : MonoBehaviour
         //So we will insert in queue n-1 minigames (being n the size of minigamesPrefabs)
         if (minigames.Count <= 1) // <= 1 because there will just be a score minigame left inside the queue
         {
+            Debug.Log("REINSERTANDO MINIJUEGOS");
             reAddToQueue(minigamesPrefabs);
         }
 
-        if (!nextMinigame == scoreMinigame) //Just add minigames to minigamesToPick, not scoreminigames
+        if (nextMinigame != scoreMinigame) //Just add minigames to minigamesPrefabs, not scoreminigames
         {
+            Debug.Log("INSERTANDO EN LISTA");
             minigamesPrefabs.Add(nextMinigame);
         }
 
@@ -83,6 +86,7 @@ public class MinigameHandler : MonoBehaviour
     public void StartGame(Minigame game)
     {
         game.StartMinigame();
+        Debug.Log("En ejecución: " + game);
     }
 
     #region DEBUG
