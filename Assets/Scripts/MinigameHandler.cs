@@ -30,11 +30,15 @@ public class MinigameHandler : MonoBehaviour
         }
         if (!runningQueue)
         {
-            Debug.Log("FIRST MINIGAME");
             startMinigamesQueue();
             runningQueue = true;
+            minigamesList.Clear();
+            minigamesList.Add(nextMinigame);
         }
-        minigamesList.Clear();
+        else
+        {
+            minigamesList.Clear();
+        }
         //showMinigamesQueue();
     }
 
@@ -42,7 +46,7 @@ public class MinigameHandler : MonoBehaviour
     {
         for (int i = minigamesList.Count; i > 0; i--)
         {
-            swap(minigamesList, 0, Random.Range(0, i));
+            swap(minigamesList, Random.Range(0, minigamesList.Count), Random.Range(0, minigamesList.Count));
         }
         addToQueue(minigamesList);
     }
@@ -62,7 +66,7 @@ public class MinigameHandler : MonoBehaviour
     private void startMinigamesQueue() //Call this to start the minigame queue for the first time
     {
         nextMinigame = minigames.Dequeue();
-        StartGame(nextMinigame);
+        startGame(nextMinigame);
     }
 
     public void NextMinigame() //Call this when a minigame has been finished
@@ -73,19 +77,17 @@ public class MinigameHandler : MonoBehaviour
         //So we will insert in queue n-1 minigames (being n the size of minigamesPrefabs)
         if (minigames.Count <= 1) // <= 1 because there will just be a score minigame left inside the queue
         {
-            Debug.Log("REINSERTANDO MINIJUEGOS");
             reAddToQueue(minigamesPrefabs);
         }
 
         if (nextMinigame != scoreMinigame) //Just add minigames to minigamesPrefabs, not scoreminigames
         {
-            Debug.Log("INSERTANDO EN LISTA");
             minigamesPrefabs.Add(nextMinigame);
         }
 
-        StartGame(nextMinigame);
+        startGame(nextMinigame);
     }
-    public void StartGame(Minigame game)
+    private void startGame(Minigame game)
     {
         game.StartMinigame();
         Debug.Log("En ejecución: " + game);

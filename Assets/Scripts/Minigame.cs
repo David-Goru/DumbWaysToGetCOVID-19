@@ -52,8 +52,10 @@ public class Minigame : MonoBehaviour
     {
         MinigameHandler.instance.NextMinigame();
 
+        /*
         if (win)    Debug.Log("VICTORIA");
         else        Debug.Log("DERROTA");
+        */
 
         gameObject.SetActive(false);
     }
