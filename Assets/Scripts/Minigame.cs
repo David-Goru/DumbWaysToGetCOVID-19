@@ -50,7 +50,7 @@ public class Minigame : MonoBehaviour
 
     public void EndMinigame(bool win)
     {
-        MinigameHandler.instance.NextMinigame();
+        MinigameHandler.Instance.NextMinigame();
 
         /*
         if (win)    Debug.Log("VICTORIA");

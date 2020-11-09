@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class MinigameHandler : MonoBehaviour
@@ -11,7 +12,19 @@ public class MinigameHandler : MonoBehaviour
 
     private bool runningQueue; //Bool for starting the minigames queue the first time
 
-    public static MinigameHandler instance; //Singleton
+    #region Singleton
+
+    private static MinigameHandler instance;
+
+    public static MinigameHandler Instance
+    {
+        get
+        {
+            return instance;
+        }
+    }
+
+    #endregion
 
     private void Awake()
     {
