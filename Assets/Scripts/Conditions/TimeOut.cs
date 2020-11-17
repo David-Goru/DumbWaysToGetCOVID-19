@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class TimeOut : ACondition
 {
-    [SerializeField]
-    private float time;
+    [SerializeField] private float time = 0f;
     private float timeRemaining;
 
     public float TimeRemaining { get => timeRemaining; }

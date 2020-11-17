@@ -4,12 +4,9 @@ using UnityEngine;
 
 public class MoveItem : AObjective
 {
-    [SerializeField]
-    private Vector2 initialPosition;
-    [SerializeField]
-    private Vector2 finalPosition;
-    [SerializeField]
-    private Transform item;
+    [SerializeField] private Vector2 initialPosition = new Vector2(0, 0);
+    [SerializeField] private Vector2 finalPosition = new Vector2(0, 0);
+    [SerializeField] private Transform item = null;
 
     public Vector2 InitialPosition { get => initialPosition; }
     public Vector2 FinalPosition { get => finalPosition; }

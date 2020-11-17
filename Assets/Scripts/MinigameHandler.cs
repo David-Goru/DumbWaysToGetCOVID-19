@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class MinigameHandler : MonoBehaviour
 {
-    [SerializeField] private Minigame scoreMinigame; //This will be the score minigame (minigame to show the score of the game)
-    [SerializeField] private List<Minigame> minigamesPrefabs; //List of all the minigames prefabs available
+    [SerializeField] private Minigame scoreMinigame = null; //This will be the score minigame (minigame to show the score of the game)
+    [SerializeField] private List<Minigame> minigamesPrefabs = new List<Minigame>(); //List of all the minigames prefabs available
     private Queue<Minigame> minigames; //Queue of minigames
     private Minigame nextMinigame; //Store the next minigame to play
 
