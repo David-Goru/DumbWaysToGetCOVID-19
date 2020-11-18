@@ -13,6 +13,11 @@ public class Minigame : MonoBehaviour
         else if (checkConditions()) EndMinigame(false);
     }
 
+    private void Start()
+    {
+        StartMinigame();
+    }
+
     private bool checkObjectives()
     {
         bool objectivesCompleted = true;
@@ -28,7 +33,10 @@ public class Minigame : MonoBehaviour
     {
         foreach (ACondition c in LossCondition)
         {
-            if (c.Reached) return true;
+            if (c.Reached) {
+                Debug.Log("DERROTA");
+                return true;
+            }
             c.UpdateState(Time.deltaTime);
         }
         return false;
