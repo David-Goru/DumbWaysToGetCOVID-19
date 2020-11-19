@@ -195,7 +195,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 6dbb7104d902c574bb4e9f68282341b8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -257,7 +257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Objectives:
-  - {fileID: 8562300323087353398}
+  - {fileID: 686112368}
   LossCondition:
   - {fileID: 8487994645157592739}
 --- !u!1 &8487994645443481974
@@ -270,8 +270,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8487994645443481975}
   - component: {fileID: 8487994645443481972}
-  - component: {fileID: 8487994645443481973}
   - component: {fileID: 8487994645443481978}
+  - component: {fileID: 827995948}
   m_Layer: 0
   m_Name: Player
   m_TagString: HoverActivator
@@ -331,7 +331,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: d840cdd2c7a77af44b3f9dbd544a8c3f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -343,18 +343,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8487994645443481973
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8487994645443481974}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eee438ae2652aa947a628e0f47d7c4b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &8487994645443481978
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -381,6 +369,29 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.62, y: 4.55}
   m_EdgeRadius: 0
+--- !u!114 &827995948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8487994645443481974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dae57d6582672040ad30620535a16e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  draggingObject: 0
+  maxX: 0
+  minX: 0
+  maxY: 0
+  minY: 0
+  overrideMaxX: 0
+  overrideMaxY: 0
+  overrideMinX: 0
+  overrideMinY: 0
+  lockAxisX: 1
+  lockAxisY: 0
 --- !u!1 &8487994646196612269
 GameObject:
   m_ObjectHideFlags: 0
@@ -393,6 +404,7 @@ GameObject:
   - component: {fileID: 8487994646196612272}
   - component: {fileID: 8487994646196612273}
   - component: {fileID: 8562300323087353398}
+  - component: {fileID: 686112368}
   m_Layer: 0
   m_Name: SecurityDistance
   m_TagString: Untagged
@@ -462,6 +474,21 @@ Rigidbody2D:
   m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!114 &8562300323087353398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8487994646196612269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69879764c0be1e14d8e25808940605e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Completed: 0
+  activatorTag: HoverActivator
+  player: {fileID: 8487994645443481975}
+--- !u!114 &686112368
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

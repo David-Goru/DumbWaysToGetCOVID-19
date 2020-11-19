@@ -18,6 +18,9 @@ public class MoveWithMouse : MonoBehaviour
     [SerializeField] bool overrideMaxY;
     [SerializeField] bool overrideMinX;
     [SerializeField] bool overrideMinY;
+    [Space]
+    [SerializeField] bool lockAxisX;
+    [SerializeField] bool lockAxisY;
 
     Vector2 lastMousePosition;
 
@@ -47,8 +50,23 @@ public class MoveWithMouse : MonoBehaviour
     {
         Vector2 worldPosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
         Vector2 deltaMove = worldPosition - lastMousePosition;
-        float x = Mathf.Clamp(transform.position.x + deltaMove.x, minX, maxX);
-        float y = Mathf.Clamp(transform.position.y + deltaMove.y, minY, maxY);
+        float x;
+        float y;
+        if (lockAxisX)
+        {
+            x = Mathf.Clamp(transform.position.x + deltaMove.x, minX, maxX);
+            y = transform.position.y;
+        }
+        else if(lockAxisY)
+        {
+            x = transform.position.x;
+            y = Mathf.Clamp(transform.position.y + deltaMove.y, minY, maxY);
+        }
+        else
+        {
+            x = Mathf.Clamp(transform.position.x + deltaMove.x, minX, maxX);
+            y = Mathf.Clamp(transform.position.y + deltaMove.y, minY, maxY);
+        }
         transform.position = new Vector2(x, y);
         lastMousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
 
