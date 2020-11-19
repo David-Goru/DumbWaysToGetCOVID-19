@@ -7,18 +7,32 @@ public class MoveWithMouse : MonoBehaviour
 {
     private Camera mainCamera; 
     private GameObject draggingObject;
-    private float maxX;
-    private float minX;
-    private float maxY;
-    private float minY;
+    [Header("These values just take place if you tick the booleans. Otherwise they will take the values from the bounds of the camera")]
+    [SerializeField] private float maxX;
+    [SerializeField] private float minX;
+    [SerializeField] private float maxY;
+    [SerializeField] private float minY;
+    [Space]
+    [SerializeField] bool overrideMaxX;
+    [SerializeField] bool overrideMaxY;
+    [SerializeField] bool overrideMinX;
+    [SerializeField] bool overrideMinY;
+
+
 
     void Start()
     {
         mainCamera = Camera.main;
-        maxX = mainCamera.orthographicSize * Screen.width / Screen.height;
-        minX = -maxX;
-        maxY = mainCamera.orthographicSize;
-        minY = -maxY;
+        float horizontalBound = mainCamera.orthographicSize * Screen.width / Screen.height;
+        float verticalBound = mainCamera.orthographicSize;
+        if (!overrideMaxX)
+            maxX = horizontalBound;
+        if (!overrideMinX)
+            minX = -horizontalBound;
+        if(!overrideMaxY)
+            maxY = verticalBound;
+        if(!overrideMinY)
+            minY = -verticalBound;
     }
 
     void OnMouseDown()
