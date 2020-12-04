@@ -257,7 +257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Objectives:
-  - {fileID: 686112368}
+  - {fileID: 8562300323087353398}
   LossCondition:
   - {fileID: 8487994645157592739}
 --- !u!1 &8487994645443481974
@@ -404,7 +404,6 @@ GameObject:
   - component: {fileID: 8487994646196612272}
   - component: {fileID: 8487994646196612273}
   - component: {fileID: 8562300323087353398}
-  - component: {fileID: 686112368}
   m_Layer: 0
   m_Name: SecurityDistance
   m_TagString: Untagged
@@ -474,21 +473,6 @@ Rigidbody2D:
   m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!114 &8562300323087353398
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8487994646196612269}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69879764c0be1e14d8e25808940605e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Completed: 0
-  activatorTag: HoverActivator
-  player: {fileID: 8487994645443481975}
---- !u!114 &686112368
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
