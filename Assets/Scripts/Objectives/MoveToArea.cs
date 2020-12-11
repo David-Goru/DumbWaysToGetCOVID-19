@@ -6,12 +6,28 @@ public class MoveToArea : AObjective
 {
     [SerializeField] Collider2D area;
     [SerializeField] MoveWithMouse moveWithMouse;
+    [SerializeField] bool customBool;
+    [SerializeField] GameObject customGO;
+    [SerializeField] Transform playerGO;
+    [SerializeField] BoxCollider2D customTrigger;
+    private Vector3 initPos;
     bool inArea;
+
+    private void Awake()
+    {
+        initPos = playerGO.position;
+    }
 
     public override void ResetObjective()
     {
         Completed = false;
         inArea = false;
+        if (customBool)
+        {
+            customGO.SetActive(false);
+            customTrigger.enabled = false;
+            playerGO.position = initPos;
+        }
     }
 
     public override void UpdateState()

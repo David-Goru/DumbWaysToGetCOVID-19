@@ -45,6 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Reached: 0
   time: 2
+  timeBar: {fileID: 0}
 --- !u!1 &3457830196387376975
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,6 +310,7 @@ MonoBehaviour:
   - {fileID: 3457830197339711910}
   LossCondition:
   - {fileID: 3457830196215180683}
+  DelayTime: 0.5
 --- !u!1 &3457830197339711908
 GameObject:
   m_ObjectHideFlags: 0
