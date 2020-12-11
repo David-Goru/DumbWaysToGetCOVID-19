@@ -18,8 +18,8 @@ public class TimeOut : ACondition
 
         if (timeBar != null)
         {
-            timeBar.localScale = new Vector3(15.6f, 0.4f, 1);
-            timeBar.position = new Vector3(-7.5f + (15.6f / 2), timeBar.position.y, timeBar.position.z);
+            timeBar.localScale = new Vector3(6.25f, 0.4f, 1);
+            timeBar.position = new Vector3(0.2f, timeBar.position.y, timeBar.position.z);
         }
     }
 
@@ -29,8 +29,8 @@ public class TimeOut : ACondition
         if (timeRemaining <= 0) Reached = true;
         else if (timeBar != null)
         {
-            timeBar.localScale = new Vector3(15.6f * timeRemaining / this.time, 0.4f, 1);
-            timeBar.position = new Vector3(-7.5f + timeBar.localScale.x / 2, timeBar.position.y, timeBar.position.z);
+            timeBar.localScale = new Vector3(6.25f * timeRemaining / this.time, 0.16f, 1);
+            timeBar.position = new Vector3(0.2f - (6.25f - timeBar.localScale.x) / 2, timeBar.position.y, timeBar.position.z);
         }
     }
 }
