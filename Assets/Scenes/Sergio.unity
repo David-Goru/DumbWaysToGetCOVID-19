@@ -345,11 +345,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PutYourMaskMG
       objectReference: {fileID: 0}
-    - target: {fileID: 3457830196932755386, guid: 67313720ea8e95540bf59f00e7899da5,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67313720ea8e95540bf59f00e7899da5, type: 3}
 --- !u!1001 &8487994646990065282

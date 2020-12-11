@@ -15,7 +15,7 @@ public class MoveToArea : AObjective
 
     private void Awake()
     {
-        initPos = playerGO.position;
+        if (customBool) initPos = playerGO.position;
     }
 
     public override void ResetObjective()
