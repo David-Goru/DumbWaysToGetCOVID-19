@@ -10,7 +10,7 @@ public class ReachPositionInX : ACondition
     [SerializeField] bool right;
     [SerializeField] MoveWithMouse moveWithMouse;
 
-    public override void Reset()
+    public override void ResetCondition()
     {
         transform.position = initialPos;
         Reached = false;

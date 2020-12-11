@@ -7,7 +7,7 @@ public class HoverItem : AObjective
     [SerializeField] private string activatorTag = "";
     private bool hovered = false;
 
-    public override void Reset()
+    public override void ResetObjective()
     {
         Completed = false;
         hovered = false;

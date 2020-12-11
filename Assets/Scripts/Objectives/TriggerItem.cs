@@ -15,7 +15,7 @@ public class TriggerItem : AObjective
         initPos = player.position;
     }
 
-    public override void Reset()
+    public override void ResetObjective()
     {
         resetPlayer();
         Completed = false;

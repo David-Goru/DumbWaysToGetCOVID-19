@@ -6,6 +6,6 @@ public abstract class AObjective : MonoBehaviour
 {
     [HideInInspector]
     public bool Completed;
-    public abstract void Reset();
+    public abstract void ResetObjective();
     public abstract void UpdateState();
 }

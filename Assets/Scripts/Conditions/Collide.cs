@@ -6,7 +6,7 @@ public class Collide : ACondition
 {
     [SerializeField] string colliderTag;
 
-    public override void Reset()
+    public override void ResetCondition()
     {
         Reached = false;
     }

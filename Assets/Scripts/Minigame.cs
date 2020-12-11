@@ -7,10 +7,26 @@ public class Minigame : MonoBehaviour
     public List<AObjective> Objectives;
     public List<ACondition> LossCondition;
 
+    public float DelayTime;
+
+    MinigameState state;
+    float endTimer;
+
     void Update()
-    {        
-        if (checkObjectives()) EndMinigame(true);
-        else if (checkConditions()) EndMinigame(false);
+    {  
+        if (state != MinigameState.RUNNING)
+        {
+            endTimer -= Time.deltaTime;
+            if (endTimer <= 0)
+            {
+                if (state == MinigameState.VICTORY) EndMinigame(true);
+                else EndMinigame(false);
+            }
+            return;
+        }
+
+        if (checkObjectives()) state = MinigameState.VICTORY;
+        else if (checkConditions()) state = MinigameState.DEFEAT;
     }
 
     private void Start()
@@ -44,27 +60,31 @@ public class Minigame : MonoBehaviour
 
     public void StartMinigame()
     {
+        state = MinigameState.RUNNING;
+        endTimer = DelayTime;
+
         gameObject.SetActive(true);
         foreach (AObjective o in Objectives)
         {
-            o.Reset();
+            o.ResetObjective();
         }
 
         foreach (ACondition c in LossCondition)
         {
-            c.Reset();
+            c.ResetCondition();
         }
     }
 
     public void EndMinigame(bool win)
     {
         MinigameHandler.Instance.NextMinigame();
-
-        /*
-        if (win)    Debug.Log("VICTORIA");
-        else        Debug.Log("DERROTA");
-        */
-
         gameObject.SetActive(false);
     }
+}
+
+public enum MinigameState
+{
+    RUNNING,
+    VICTORY,
+    DEFEAT
 }

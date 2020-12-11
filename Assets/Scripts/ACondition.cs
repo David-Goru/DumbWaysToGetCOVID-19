@@ -6,6 +6,6 @@ public abstract class ACondition : MonoBehaviour
 {
     [HideInInspector]
     public bool Reached;
-    public abstract void Reset();
+    public abstract void ResetCondition();
     public abstract void UpdateState(float time);
 }

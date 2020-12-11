@@ -11,7 +11,7 @@ public class MoveItem : AObjective
     public Vector2 InitialPosition { get => initialPosition; }
     public Vector2 FinalPosition { get => finalPosition; }
 
-    public override void Reset()
+    public override void ResetObjective()
     {
         Completed = false;
         item.position = initialPosition;

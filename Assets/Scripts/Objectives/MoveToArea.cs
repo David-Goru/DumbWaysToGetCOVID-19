@@ -8,7 +8,7 @@ public class MoveToArea : AObjective
     [SerializeField] MoveWithMouse moveWithMouse;
     bool inArea;
 
-    public override void Reset()
+    public override void ResetObjective()
     {
         Completed = false;
         inArea = false;

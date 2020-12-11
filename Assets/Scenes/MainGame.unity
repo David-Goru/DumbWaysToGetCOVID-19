@@ -392,6 +392,7 @@ MonoBehaviour:
   - {fileID: 1446482520}
   LossCondition:
   - {fileID: 2073015163}
+  DelayTime: 0
 --- !u!4 &184122789
 Transform:
   m_ObjectHideFlags: 0
@@ -1361,6 +1362,7 @@ MonoBehaviour:
   - {fileID: 1702522028}
   LossCondition:
   - {fileID: 1718133738}
+  DelayTime: 0
 --- !u!4 &1137022365
 Transform:
   m_ObjectHideFlags: 0
@@ -1378,6 +1380,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1320591505 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2252821114241231447, guid: d8566fcfdda9f0641a7654b05e2f6df0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1637696451}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1446482519
 GameObject:
   m_ObjectHideFlags: 0
@@ -1608,6 +1616,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2577157107237193111, guid: d8566fcfdda9f0641a7654b05e2f6df0,
+        type: 3}
+      propertyPath: timeBar
+      value: 
+      objectReference: {fileID: 1320591505}
     - target: {fileID: 6430836650372100223, guid: d8566fcfdda9f0641a7654b05e2f6df0,
         type: 3}
       propertyPath: m_Enabled
@@ -1781,6 +1794,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Reached: 0
   time: 1
+  timeBar: {fileID: 0}
 --- !u!1 &1845740643
 GameObject:
   m_ObjectHideFlags: 0
@@ -1945,6 +1959,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Reached: 0
   time: 1
+  timeBar: {fileID: 0}
 --- !u!4 &2073015164
 Transform:
   m_ObjectHideFlags: 0
