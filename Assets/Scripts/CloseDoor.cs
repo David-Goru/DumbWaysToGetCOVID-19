@@ -19,7 +19,7 @@ public class CloseDoor : MonoBehaviour
     {
         doorTrigger.enabled = true;
         sp.sprite = closedSprite;
-        sp.sortingOrder = 2;
+        sp.sortingOrder = 1;
     }
 
     private void OnEnable()
