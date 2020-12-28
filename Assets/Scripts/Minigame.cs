@@ -49,10 +49,7 @@ public class Minigame : MonoBehaviour
     {
         foreach (ACondition c in LossCondition)
         {
-            if (c.Reached) {
-                Debug.Log("DERROTA");
-                return true;
-            }
+            if (c.Reached) return true;
             c.UpdateState(Time.deltaTime);
         }
         return false;
@@ -77,6 +74,11 @@ public class Minigame : MonoBehaviour
 
     public void EndMinigame(bool win)
     {
+        if (gameObject.name != "SCORE")
+        {
+            if (win) ScoreSystem.TotalScore++;
+            ScoreSystem.LastGameResult = win;
+        }
         MinigameHandler.Instance.NextMinigame();
         gameObject.SetActive(false);
     }
