@@ -9,7 +9,7 @@ public class TriggerItem : AObjective
 
     [SerializeField] private Transform player;
     private Vector3 initPos;
-    [SerializeField] Transform initPosCovid;
+    //[SerializeField] Transform initPosCovid;
 
     [SerializeField] Animator anim;
 
@@ -43,7 +43,7 @@ public class TriggerItem : AObjective
 
     private void resetAnim()
     {
-        anim.transform.position = initPosCovid.position; //NO FUNCIONA
+        //anim.transform.position = initPosCovid.position; //NO FUNCIONA
         anim.SetBool("TriggerAnim", false);
     }
 
