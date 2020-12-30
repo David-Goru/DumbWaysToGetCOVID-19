@@ -9,6 +9,9 @@ public class TriggerItem : AObjective
 
     [SerializeField] private Transform player;
     private Vector3 initPos;
+    [SerializeField] Transform initPosCovid;
+
+    [SerializeField] Animator anim;
 
     private void Awake()
     {
@@ -17,6 +20,7 @@ public class TriggerItem : AObjective
 
     public override void ResetObjective()
     {
+        if (anim != null) resetAnim();
         resetPlayer();
         Completed = false;
         hovered = false;
@@ -24,13 +28,23 @@ public class TriggerItem : AObjective
 
     public override void UpdateState()
     {
-        if (hovered) Completed = true;
+        if (hovered)
+        {
+            if (anim != null) anim.SetBool("TriggerAnim", true);
+            Completed = true;
+        }
         else Completed = false;
     }
 
     private void resetPlayer()
     {
         player.position = initPos;
+    }
+
+    private void resetAnim()
+    {
+        anim.transform.position = initPosCovid.position; //NO FUNCIONA
+        anim.SetBool("TriggerAnim", false);
     }
 
     void OnTriggerEnter2D(Collider2D col)
