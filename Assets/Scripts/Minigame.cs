@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Minigame : MonoBehaviour
 {
+    public bool AnyObjectiveWin = false;
     public List<AObjective> Objectives;
     public List<ACondition> LossCondition;
 
@@ -37,10 +38,23 @@ public class Minigame : MonoBehaviour
     private bool checkObjectives()
     {
         bool objectivesCompleted = true;
-        foreach (AObjective o in Objectives)
+
+        if (AnyObjectiveWin)
         {
-            if (!o.Completed) objectivesCompleted = false;
-            o.UpdateState();
+            objectivesCompleted = false;
+            foreach (AObjective o in Objectives)
+            {
+                if (o.Completed) objectivesCompleted = true;
+                o.UpdateState();
+            }
+        }
+        else
+        {
+            foreach (AObjective o in Objectives)
+            {
+                if (!o.Completed) objectivesCompleted = false;
+                o.UpdateState();
+            }
         }
         return objectivesCompleted;
     }
