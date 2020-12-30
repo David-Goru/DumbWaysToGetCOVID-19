@@ -735,11 +735,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: OpenTheWindowMG
       objectReference: {fileID: 0}
-    - target: {fileID: 8227725809963123844, guid: 23056a8e05f61044ea434b7bbda98b69,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8227725809963123850, guid: 23056a8e05f61044ea434b7bbda98b69,
         type: 3}
       propertyPath: m_LocalPosition.x

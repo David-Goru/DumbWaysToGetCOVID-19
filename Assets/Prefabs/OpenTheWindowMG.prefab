@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6760588268464911581}
   - component: {fileID: 6760588268464911582}
   m_Layer: 0
-  m_Name: Covid19
+  m_Name: Covid19_Window
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -628,7 +628,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: d7af7aa6ff0c6fc4c892b3d51736b143, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -869,7 +869,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8227725809963123850
 Transform:
   m_ObjectHideFlags: 0
