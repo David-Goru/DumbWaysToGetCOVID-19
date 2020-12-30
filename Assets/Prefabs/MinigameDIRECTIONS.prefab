@@ -329,6 +329,10 @@ MonoBehaviour:
   Completed: 0
   area: {fileID: 4813536405453413277}
   moveWithMouse: {fileID: 4813536405852453406}
+  customBool: 0
+  customGO: {fileID: 0}
+  playerGO: {fileID: 0}
+  customTrigger: {fileID: 0}
 --- !u!1 &4813536405383160853
 GameObject:
   m_ObjectHideFlags: 0
@@ -565,7 +569,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8af1e3d4cdf9d1e47885326ae347e9e9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c04ad0f5c6806df4c9c4cd6c886373e0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -586,7 +590,7 @@ Animator:
   m_GameObject: {fileID: 4813536405852453403}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e81583333d246fe44b3be37e549d163d, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2da2fece63a791e4180c099bb2a474c9, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -852,6 +856,10 @@ MonoBehaviour:
   Completed: 0
   area: {fileID: 4813536405425450293}
   moveWithMouse: {fileID: 4813536406569232017}
+  customBool: 0
+  customGO: {fileID: 0}
+  playerGO: {fileID: 0}
+  customTrigger: {fileID: 0}
 --- !u!1 &4813536406569232026
 GameObject:
   m_ObjectHideFlags: 0
@@ -928,7 +936,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8af1e3d4cdf9d1e47885326ae347e9e9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c04ad0f5c6806df4c9c4cd6c886373e0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -949,7 +957,7 @@ Animator:
   m_GameObject: {fileID: 4813536406569232026}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e81583333d246fe44b3be37e549d163d, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2da2fece63a791e4180c099bb2a474c9, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

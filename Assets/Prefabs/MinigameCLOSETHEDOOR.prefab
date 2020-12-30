@@ -76,8 +76,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 8af1e3d4cdf9d1e47885326ae347e9e9, type: 3}
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: c04ad0f5c6806df4c9c4cd6c886373e0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,7 +98,7 @@ Animator:
   m_GameObject: {fileID: 454873344200982258}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e81583333d246fe44b3be37e549d163d, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2da2fece63a791e4180c099bb2a474c9, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -144,7 +144,7 @@ BoxCollider2D:
   m_Offset: {x: 1.35, y: 3.04}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.54, y: 0.07}
+    pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 10.85, y: 7.68}
     newSize: {x: 10.85, y: 7.68}
     adaptiveTilingThreshold: 0.5
@@ -187,6 +187,7 @@ MonoBehaviour:
   Completed: 0
   activatorTag: HoverActivator
   player: {fileID: 454873344200982257}
+  anim: {fileID: 0}
 --- !u!114 &454873344200982266
 MonoBehaviour:
   m_ObjectHideFlags: 0
