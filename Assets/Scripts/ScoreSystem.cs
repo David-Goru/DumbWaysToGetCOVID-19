@@ -6,8 +6,6 @@ public class ScoreSystem : MonoBehaviour
     public static bool LastGameResult;
     public static int TotalScore;
 
-    [SerializeField] GameObject winText;
-    [SerializeField] GameObject lossText;
     [SerializeField] Text scoreText;
     [SerializeField] Text informativeText;
     [SerializeField] Live[] lives;
@@ -33,8 +31,6 @@ public class ScoreSystem : MonoBehaviour
         }
         else
         {
-            winText.SetActive(false);
-            lossText.SetActive(true);
             lives[3 - remainingLives].loseLive();
             SetLivesSprites(remainingLives);
             MinigameHandler.Instance.lives--;
