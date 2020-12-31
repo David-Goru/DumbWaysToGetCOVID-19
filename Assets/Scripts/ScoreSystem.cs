@@ -10,6 +10,7 @@ public class ScoreSystem : MonoBehaviour
     [SerializeField] GameObject lossText;
     [SerializeField] Text scoreText;
     [SerializeField] Text informativeText;
+    [SerializeField] Live[] lives;
 
     string[] informativeTexts;
 
@@ -25,17 +26,35 @@ public class ScoreSystem : MonoBehaviour
 
     void OnEnable()
     {
+        int remainingLives = MinigameHandler.Instance.lives;
         if (LastGameResult)
         {
-            winText.SetActive(true);
-            lossText.SetActive(false);
+            SetLivesSprites(remainingLives);
         }
         else
         {
             winText.SetActive(false);
             lossText.SetActive(true);
+            lives[3 - remainingLives].loseLive();
+            SetLivesSprites(remainingLives);
+            MinigameHandler.Instance.lives--;
         }
         scoreText.text = string.Format("SCORE: {0}", TotalScore);
         informativeText.text = informativeTexts[Random.Range(0, informativeTexts.Length)];
+    }
+
+    void SetLivesSprites(int remainingLives)
+    {
+        int i = 2;
+        while (remainingLives > 0)
+        {
+            lives[i].setImage(false);
+            i--;
+            remainingLives--;
+        }
+        for (int j = 0; j < i; j++)
+        {
+            lives[j].setImage(true);
+        }
     }
 }

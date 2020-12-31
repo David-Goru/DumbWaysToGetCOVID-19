@@ -10,6 +10,8 @@ public class MinigameHandler : MonoBehaviour
     private Queue<Minigame> minigames; //Queue of minigames
     private Minigame nextMinigame; //Store the next minigame to play
 
+    public int lives = 3;
+
     private bool runningQueue; //Bool for starting the minigames queue the first time
 
     #region Singleton

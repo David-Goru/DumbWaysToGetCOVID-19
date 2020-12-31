@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Minigame : MonoBehaviour
 {
@@ -93,8 +94,17 @@ public class Minigame : MonoBehaviour
             if (win) ScoreSystem.TotalScore++;
             ScoreSystem.LastGameResult = win;
         }
+        else
+        {
+            if (MinigameHandler.Instance.lives == 0)
+            {
+                SceneManager.LoadScene("MainMenu");
+                return;
+            }
+        }
         MinigameHandler.Instance.NextMinigame();
         gameObject.SetActive(false);
+        
     }
 }
 
