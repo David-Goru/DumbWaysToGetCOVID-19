@@ -144,7 +144,7 @@ BoxCollider2D:
   m_Offset: {x: 1.35, y: 3.04}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.54, y: 0.07}
     oldSize: {x: 10.85, y: 7.68}
     newSize: {x: 10.85, y: 7.68}
     adaptiveTilingThreshold: 0.5
@@ -172,6 +172,7 @@ MonoBehaviour:
   speed: 3
   right: 1
   moveWithMouse: {fileID: 0}
+  isArturoMinigame: 1
 --- !u!114 &454873344200982256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -668,6 +669,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e94a4f875b26a724c8c38a7cbac1b6f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Score: 4
+  AnyObjectiveWin: 0
   Objectives:
   - {fileID: 454873344200982256}
   LossCondition:
