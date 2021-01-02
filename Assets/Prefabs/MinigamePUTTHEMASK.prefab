@@ -123,6 +123,7 @@ MonoBehaviour:
   speed: 2
   right: 1
   moveWithMouse: {fileID: 0}
+  isArturoMinigame: 1
 --- !u!114 &97810647622234247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -348,6 +349,7 @@ MonoBehaviour:
   speed: 2
   right: 0
   moveWithMouse: {fileID: 0}
+  isArturoMinigame: 0
 --- !u!1 &97810648548874460
 GameObject:
   m_ObjectHideFlags: 0
@@ -471,6 +473,7 @@ MonoBehaviour:
   speed: 2
   right: 1
   moveWithMouse: {fileID: 0}
+  isArturoMinigame: 1
 --- !u!114 &97810648548874434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -658,6 +661,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e94a4f875b26a724c8c38a7cbac1b6f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Score: 6
+  AnyObjectiveWin: 0
   Objectives:
   - {fileID: 97810647789842778}
   LossCondition:

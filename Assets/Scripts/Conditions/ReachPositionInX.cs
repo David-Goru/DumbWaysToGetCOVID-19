@@ -9,6 +9,7 @@ public class ReachPositionInX : ACondition
     [SerializeField] float speed;
     [SerializeField] bool right;
     [SerializeField] MoveWithMouse moveWithMouse;
+    [SerializeField] bool isArturoMinigame;
 
     public override void ResetCondition()
     {
@@ -44,13 +45,22 @@ public class ReachPositionInX : ACondition
     
     void move(float time)
     {
-        if (right)
+        float newSpeed;
+        if (isArturoMinigame)
         {
-            transform.Translate(Vector3.right * speed * time);
+            newSpeed = speed + Mathf.Clamp(ScoreSystem.TotalScore, 0, 400) / 100;
         }
         else
         {
-            transform.Translate(Vector3.left * speed * time);
+            newSpeed = speed + Mathf.Clamp(ScoreSystem.TotalScore, 0, 400) / 100;
+        }
+        if (right)
+        {
+            transform.Translate(Vector3.right * newSpeed * time);
+        }
+        else
+        {
+            transform.Translate(Vector3.left * newSpeed * time);
         }
     }
 }

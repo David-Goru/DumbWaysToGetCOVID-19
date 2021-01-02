@@ -666,6 +666,7 @@ MonoBehaviour:
   speed: 3
   right: 1
   moveWithMouse: {fileID: 4813536405852453406}
+  isArturoMinigame: 1
 --- !u!50 &4813536405852453397
 Rigidbody2D:
   serializedVersion: 4
@@ -1033,6 +1034,7 @@ MonoBehaviour:
   speed: 3
   right: 0
   moveWithMouse: {fileID: 4813536406569232017}
+  isArturoMinigame: 1
 --- !u!50 &4813536406569232021
 Rigidbody2D:
   serializedVersion: 4
@@ -1105,6 +1107,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e94a4f875b26a724c8c38a7cbac1b6f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Score: 6
+  AnyObjectiveWin: 0
   Objectives:
   - {fileID: 4813536405311481595}
   - {fileID: 4813536406464807729}
