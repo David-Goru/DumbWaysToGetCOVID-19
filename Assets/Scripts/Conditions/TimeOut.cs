@@ -14,7 +14,7 @@ public class TimeOut : ACondition
     public override void ResetCondition()
     {
         Reached = false;
-        timeRemaining = time;
+        timeRemaining = time - Mathf.Clamp(ScoreSystem.TotalScore, 0, 250) / 100;
 
         if (timeBar != null)
         {
