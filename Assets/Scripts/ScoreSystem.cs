@@ -1,10 +1,13 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class ScoreSystem : MonoBehaviour
 {
     public static bool LastGameResult;
     public static int TotalScore;
+    public static int ScoreToAdd;
 
     [SerializeField] Text scoreText;
     [SerializeField] Text informativeText;
@@ -38,6 +41,7 @@ public class ScoreSystem : MonoBehaviour
         int remainingLives = MinigameHandler.Instance.lives;
         if (LastGameResult)
         {
+            StartCoroutine(AddScore());
             SetLivesSprites(remainingLives);
         }
         else
@@ -46,7 +50,6 @@ public class ScoreSystem : MonoBehaviour
             SetLivesSprites(remainingLives);
             MinigameHandler.Instance.lives--;
         }
-        scoreText.text = string.Format("SCORE: {0}", TotalScore);
         informativeText.text = informativeTexts[Random.Range(0, informativeTexts.Length)];
     }
 
@@ -62,6 +65,18 @@ public class ScoreSystem : MonoBehaviour
         for (int j = 0; j < i; j++)
         {
             lives[j].setImage(true);
+        }
+    }
+
+    private IEnumerator AddScore()
+    {
+        while (ScoreToAdd > 0)
+        {
+            ScoreSystem.TotalScore++;
+            ScoreToAdd--;
+            scoreText.text = string.Format("SCORE: {0}", TotalScore);
+
+            yield return new WaitForSeconds(0.1f);
         }
     }
 }

@@ -35,6 +35,7 @@ public class Minigame : MonoBehaviour
     private void Start()
     {
         StartMinigame();
+
     }
 
     private bool checkObjectives()
@@ -92,13 +93,14 @@ public class Minigame : MonoBehaviour
     {
         if (gameObject.name != "SCORE")
         {
-            if (win) ScoreSystem.TotalScore += Score;
+            if (win) ScoreSystem.ScoreToAdd = Score;
             ScoreSystem.LastGameResult = win;
         }
         else
         {
             if (MinigameHandler.Instance.lives == 0)
             {
+                ScoreSystem.TotalScore = 0;
                 SceneManager.LoadScene("MainMenu");
                 return;
             }
