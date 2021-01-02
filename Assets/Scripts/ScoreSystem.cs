@@ -15,11 +15,22 @@ public class ScoreSystem : MonoBehaviour
     void Awake()
     {
         informativeTexts = new string[] { 
-        "Wash your hands", 
-        "Use masks", 
-        "Is better to get vaccinated than to kill your grand mother", 
-        "There are too many things to do and not enough motivation. I just want to die. I don't like college", 
-        "Clean things"};
+        "Wash your hands for at least 20 seconds with soap everytime you can", 
+        "Use masks if you're with people or away from home", 
+//        "Is better to get vaccinated than to kill your grandmother", 
+        "Try to not touch your face. Are you touching it right now? Move your hands away!", 
+        "Stop shaking hands and hugging people - for now", 
+        "Don't share personal items, like phones or makeup", 
+        "Cover your mouth and nose when you cough and sneeze", 
+        "Take physical social distancing seriously. Life is not a game", 
+        "Don't gather in groups. There'll be enough time to do parties", // unless you die of COVID-19
+        "Avoid eating or drinking in public places", 
+        "Are you sick? Do self-quarantine. Please.", 
+        "You can carry or have the COVID-19 even if you don't have symptoms at all and transmit it to other people unknowingly", 
+        "Do you have symptoms? Don't go to the hospital, call them!", 
+        "Disinfect your hands everytime you get into a place, like a shop or a restaurant",
+        "Make sure to always have a second mask available in case the first one breaks or disappears",
+        "Clean and disinfect surfaces like toys, furnitures or door handles"};
     }
 
     void OnEnable()
