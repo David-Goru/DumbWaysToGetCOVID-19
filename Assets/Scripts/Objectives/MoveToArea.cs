@@ -32,8 +32,11 @@ public class MoveToArea : AObjective
 
     public override void UpdateState()
     {
-        if (inArea && !moveWithMouse.draggingObject)
-            Completed = true;
+        if (inArea)
+        {
+            if (customBool) Completed = true;
+            else if (!moveWithMouse.draggingObject) Completed = true;
+        }
         else
             Completed = false;
     }
