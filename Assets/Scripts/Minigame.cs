@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Minigame : MonoBehaviour
 {
+    public int Score;
     public bool AnyObjectiveWin = false;
     public List<AObjective> Objectives;
     public List<ACondition> LossCondition;
@@ -91,7 +92,7 @@ public class Minigame : MonoBehaviour
     {
         if (gameObject.name != "SCORE")
         {
-            if (win) ScoreSystem.TotalScore++;
+            if (win) ScoreSystem.TotalScore += Score;
             ScoreSystem.LastGameResult = win;
         }
         else

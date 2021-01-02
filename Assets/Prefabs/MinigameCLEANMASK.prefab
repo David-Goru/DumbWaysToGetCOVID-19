@@ -55,6 +55,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e94a4f875b26a724c8c38a7cbac1b6f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Score: 4
+  AnyObjectiveWin: 0
   Objectives:
   - {fileID: 4653399819805835703}
   - {fileID: 4653399820580536725}
