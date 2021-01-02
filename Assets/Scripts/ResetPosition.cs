@@ -3,7 +3,7 @@
 public class ResetPosition : MonoBehaviour
 {
     [SerializeField] Vector3 startPos;
-    void Start()
+    void OnEnable()
     {
         transform.position = startPos;
     }
