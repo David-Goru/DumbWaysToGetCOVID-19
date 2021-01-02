@@ -338,6 +338,7 @@ MonoBehaviour:
   speed: 3
   right: 1
   moveWithMouse: {fileID: 0}
+  isArturoMinigame: 0
 --- !u!50 &2403990857617184395
 Rigidbody2D:
   serializedVersion: 4
@@ -553,6 +554,7 @@ MonoBehaviour:
   speed: 3
   right: 1
   moveWithMouse: {fileID: 0}
+  isArturoMinigame: 0
 --- !u!50 &2403990858260456179
 Rigidbody2D:
   serializedVersion: 4
@@ -696,6 +698,7 @@ MonoBehaviour:
   speed: 3
   right: 1
   moveWithMouse: {fileID: 0}
+  isArturoMinigame: 0
 --- !u!50 &2403990858584145284
 Rigidbody2D:
   serializedVersion: 4
@@ -839,6 +842,7 @@ MonoBehaviour:
   speed: 3
   right: 1
   moveWithMouse: {fileID: 0}
+  isArturoMinigame: 0
 --- !u!50 &2403990858648024924
 Rigidbody2D:
   serializedVersion: 4
@@ -1366,7 +1370,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7733867082960945240
 Transform:
   m_ObjectHideFlags: 0
@@ -1401,6 +1405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e94a4f875b26a724c8c38a7cbac1b6f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Score: 8
   AnyObjectiveWin: 0
   Objectives:
   - {fileID: 7174706073941059538}

@@ -216,11 +216,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: WashYourHandsMG
       objectReference: {fileID: 0}
-    - target: {fileID: 1320266346537786641, guid: c36dc6db9fa00c24e96c33063f814b6e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1320266346537786647, guid: c36dc6db9fa00c24e96c33063f814b6e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -289,11 +284,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SecurityDistanceQueueMG
-      objectReference: {fileID: 0}
-    - target: {fileID: 7338026552678030448, guid: 427e9fd65d873fe42b6835c917ce09a2,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7733867082960945240, guid: 427e9fd65d873fe42b6835c917ce09a2,
         type: 3}
@@ -419,11 +409,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PutYourMaskMG
       objectReference: {fileID: 0}
-    - target: {fileID: 3457830196932755386, guid: 67313720ea8e95540bf59f00e7899da5,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67313720ea8e95540bf59f00e7899da5, type: 3}
 --- !u!1001 &6760588268579675351
@@ -437,11 +422,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: OpenTheWindowMG
-      objectReference: {fileID: 0}
-    - target: {fileID: 8227725809963123844, guid: 23056a8e05f61044ea434b7bbda98b69,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8227725809963123850, guid: 23056a8e05f61044ea434b7bbda98b69,
         type: 3}
@@ -566,11 +546,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SecurityDistanceMG
-      objectReference: {fileID: 0}
-    - target: {fileID: 8487994645207971659, guid: 2286301e147b85d4394cefd3c5801e2e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2286301e147b85d4394cefd3c5801e2e, type: 3}
