@@ -524,6 +524,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a07fe7e292ff894d8bf2a7ffa5ca10a, type: 3}
+--- !u!1001 &1352208578054387518
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3650275025466256195, guid: d30404059073f6241a6adfa9d1aee6dd,
+        type: 3}
+      propertyPath: m_Name
+      value: MinigameRadarCovid
+      objectReference: {fileID: 0}
+    - target: {fileID: 4335205762304194411, guid: d30404059073f6241a6adfa9d1aee6dd,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4335205762304194411, guid: d30404059073f6241a6adfa9d1aee6dd,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4335205762304194411, guid: d30404059073f6241a6adfa9d1aee6dd,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4335205762304194411, guid: d30404059073f6241a6adfa9d1aee6dd,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4335205762304194411, guid: d30404059073f6241a6adfa9d1aee6dd,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4335205762304194411, guid: d30404059073f6241a6adfa9d1aee6dd,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4335205762304194411, guid: d30404059073f6241a6adfa9d1aee6dd,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4335205762304194411, guid: d30404059073f6241a6adfa9d1aee6dd,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4335205762304194411, guid: d30404059073f6241a6adfa9d1aee6dd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4335205762304194411, guid: d30404059073f6241a6adfa9d1aee6dd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4335205762304194411, guid: d30404059073f6241a6adfa9d1aee6dd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d30404059073f6241a6adfa9d1aee6dd, type: 3}
 --- !u!1001 &6085307471463817288
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -535,6 +604,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MinigameAVOIDCOVID
+      objectReference: {fileID: 0}
+    - target: {fileID: 3914139366049005022, guid: ba6b25b88d402a040815f4a1637b68f4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4093787885038363126, guid: ba6b25b88d402a040815f4a1637b68f4,
         type: 3}
