@@ -26,6 +26,9 @@ public class FollowMouse : MonoBehaviour
                 case "Spray":
                     transform.GetComponent<Animator>().SetTrigger("SprayOn");
                     break;
+                case "Cloth":
+                    transform.GetComponent<CircleCollider2D>().enabled = true;
+                    break;
                 default:
                     Debug.Log("FollowMouse objectType not detected correctly");
                     break;
@@ -38,6 +41,9 @@ public class FollowMouse : MonoBehaviour
             {
                 case "Spray":
                     transform.GetComponent<Animator>().SetTrigger("SprayOff");
+                    break;
+                case "Cloth":
+                    transform.GetComponent<CircleCollider2D>().enabled = false;
                     break;
                 default:
                     Debug.Log("FollowMouse objectType not detected correctly");
