@@ -340,7 +340,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Reached: 0
-  time: 2
+  time: 3
   timeBar: {fileID: 827937054}
 --- !u!1 &3457830196387376975
 GameObject:
